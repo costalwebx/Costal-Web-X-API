@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costal Web X API Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Costal Web X API Interface</h1>
+    </header>
+    <section id="search-section">
+        <input type="text" id="search-bar" placeholder="Enter command e.g. ghtip://api.index.vsx" />
+        <button onclick="handleSearch()">Search</button>
+    </section>
+
+    <section id="api-section" class="hidden">
+        <h2>API Setup</h2>
+        <input type="text" id="api-name" placeholder="Enter API Name" />
+        <textarea id="api-code" placeholder="Enter HTML code for API"></textarea>
+        <button onclick="generateApiKey()">Get API Key</button>
+        <p id="api-key-output"></p>
+        <button onclick="goBackToSearch()">Back to Search</button>
+    </section>
+
+    <section id="execute-section" class="hidden">
+        <h2>Execute API</h2>
+        <input type="text" id="api-key-input" placeholder="Enter API Key" />
+        <button onclick="executeApi()">Execute</button>
+        <button onclick="goBackToSearch()">Back to Search</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+  </html>
